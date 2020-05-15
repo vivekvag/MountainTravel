@@ -66,7 +66,7 @@ header nav li {
   margin: 0 15px;
 }
 
-/* Section Part */
+/* Hero part of the section */
 
 section{
   display: flex;
@@ -75,6 +75,10 @@ section{
   padding: 100px 80px;
 }
 
+/* Excluding the hero section all section will have alternate white and grey color */
+section:not(.hero):nth-child(even) {
+  background-color: #f5f5f5;
+}
 /* Hero class of the Section */
 
 .hero{
@@ -112,7 +116,7 @@ section{
 }
 
 .hero a.btn{
-  border-radius: 4px;
+  border-radius: 5px;
   text-transform: uppercase;
   font-weight: bold;
   text-align: center;
@@ -135,12 +139,32 @@ section{
   }
 }
 
+@media (max-width:800px) {
+  .hero{
+    min-height: 600px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .hero h2{
+    font-size: 22px;
+  }
+
+  .hero a.btn{
+    padding: 15px 40px;
+  }
+
+}
+
+
 /* Destinations class of the Section */
 
 section h3.title{
   text-transform: capitalize;
   font-size:32px;
-  font-weight: 500;
+  font-weight: bold;
   font-family: "Open Sans", sans-serif;
   margin-bottom: 30px;
   text-align: center;
@@ -191,5 +215,104 @@ hr{
 }
 .destinations .grid li.large{
   flex-basis: 70%;
+
+}
+
+@media (max-width:100px) {
+  .destinations .grid li.small,
+  .destinations .grid li.large{
+    flex-basis: 50%;
+  }
+}
+
+@media (max-width:800px) {
+  .destinations .grid li.small,
+  .destinations .grid li.large{
+    flex-basis: 100%;
+  }
+}
+
+/* Packages section of the body */
+
+.packages .grid li {
+  padding: 50px;
+  flex-basis: 50%;
+  text-align: center;
+}
+
+.packages .grid li i {
+  color: #8c9eff;
+}
+
+.packages .grid li h4{
+  font-size: 30px;
+  margin: 25px 0;
+}
+
+/* testimonals section  */
+
+.testimonals .quote{
+  font-size: 22px;
+  font-weight: 300px;
+  line-height: 1.5;
+  margin: 45px 0 25px;
+}
+
+.testimonals cite{
+  margin-top: -5px;
+}
+
+/* Contact Form */
+
+.contact form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 60%;
+}
+
+.contact form input {
+  padding: 15px;
+  margin-right: 30px;
+  font-size: 18px;
+  color: #555;
+  flex:1;
+}
+
+.contact form a.btn{
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  background-color: #3f51b5;
+  opacity: 1;
+  padding: 18px 46px;
+}
+
+footer{
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #607d8b;
+  color:#fff;
+  padding: 20px 0;
+
+}
+
+footer ul {
+  display: flex;
+
+}
+
+footer ul li{
+  margin-left: 16px;
+}
+
+footer p{
+  text-transform: uppercase;
+  font-size: 14px;
+  opacity: 0.6;
+  align-self: center;
 
 }
