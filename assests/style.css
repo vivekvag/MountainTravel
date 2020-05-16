@@ -225,7 +225,12 @@ hr{
   }
 }
 
-
+/* @media (max-width:800px) {
+  .destinations .grid li.small,
+  .destinations .grid li.large{
+    flex-basis: 100%;
+  }
+} */
 
 /* Packages section of the body */
 
@@ -244,6 +249,19 @@ hr{
   margin: 25px 0;
 }
 
+@media (max-width:1200px) {
+  .packages .grid li{
+    padding: 20px;
+    flex-basis: 100%;
+  }
+
+  .packages .grid li h4{
+    font-size: 22px;
+    margin: 12px 0;
+  }
+
+}
+
 /* testimonals section  */
 
 .testimonals .quote{
@@ -256,6 +274,19 @@ hr{
 .testimonals cite{
   margin-top: -5px;
 }
+
+@media (max-width:1200px) {
+  .testimonals .quote{
+    font-size: 18px;
+    margin: 15px 0;
+  }
+  .testimonals cite{
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+
+}
+
 
 /* Contact Form */
 
@@ -273,6 +304,7 @@ hr{
   font-size: 18px;
   color: #555;
   flex:1;
+  border: 1px solid #333;
 }
 
 .contact form a.btn{
@@ -284,6 +316,23 @@ hr{
   opacity: 1;
   padding: 18px 46px;
 }
+
+@media (max-width:1200px) {
+  .contact form{
+    width: 80%;
+  }
+  .contact form input{
+    flex-basis:100%;
+    margin:0;
+    margin-bottom: 20px;
+  }
+
+  .contact form a.btn{
+    padding: 12px 34px;
+  }
+}
+
+/* Footer Part */
 
 footer{
   display:flex;
@@ -310,4 +359,19 @@ footer p{
   opacity: 0.6;
   align-self: center;
 
+}
+
+
+@media (max-width:1200px) {
+  footer{
+    flex-direction: column;
+  }
+  footer p{
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  footer ul li{
+    margin:0 8px;
+  }
 }
